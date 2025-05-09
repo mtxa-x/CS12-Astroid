@@ -66,6 +66,7 @@ class SpaceShip {
   
 
   void shoot() {
+    if (spacekey) bullets.add(new Bullet() );
 
   }
 

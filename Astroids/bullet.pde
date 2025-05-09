@@ -1,23 +1,35 @@
+//List of Bullets
+ArrayList<Bullet> bullets;
+
+PImage laser;
+
+void bulletSetup() {
+  bullets = new ArrayList ();
+  
+  laser = loadImage("bullet.png");
+}
+
+
 class Bullet {
   
   PVector loc;
   PVector vel;
   int lives;
-  PImage img;
-   float scaleFactor
+  float scaleFactor;
   
   
   Bullet(){
     loc = new PVector(player.loc.x, player.loc.y);
     vel = player.dir.copy();
     vel.setMag(10); 
+    scaleFactor = 0.05;
     
-    img = loadImage("bullet.png");
+    
   }
   
   void display(){
     
-    image(img, loc.x, loc.y, img.width * scaleFactor, img.height * scaleFactor);
+    image(laser, loc.x, loc.y, laser.width * scaleFactor, laser.height * scaleFactor);
     
   }
   

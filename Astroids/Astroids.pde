@@ -25,6 +25,7 @@ void setup(){
   
  gameSetup();
  spaceSetup();
+ bulletSetup();
   
   
   

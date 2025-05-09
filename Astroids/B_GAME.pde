@@ -2,6 +2,7 @@ PVector loc, vel, grav;
 float x, y ,z, d;
 
 
+
 void game(){
   
   background(0);
@@ -20,6 +21,16 @@ void game(){
 
   player.update();
   player.display();
+  
+  
+  //BULLET CLASS
+  
+  for(int i = 0; i < bullets.size(); i++){
+    Bullet currentBullet = bullets.get(i);
+    currentBullet.move();
+    currentBullet.display();
+  }
+  
 }
 
 void gameClicks() {
