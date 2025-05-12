@@ -8,7 +8,7 @@ void spaceSetup() {
   player = new SpaceShip();
 }
 
-class SpaceShip {
+class SpaceShip extends GameObject {
   // Instance variables
   PVector loc;
   PVector vel;
@@ -20,8 +20,7 @@ class SpaceShip {
 
   // Constructor
   SpaceShip() {
-    loc = new PVector(width/2, height/2);
-    vel = new PVector(0, 0);
+    super(with/2, height/2, 0, 0);
     dir = new PVector(0.1, 0);
 
     img = loadImage("spaceship.png");

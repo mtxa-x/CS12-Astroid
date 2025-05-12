@@ -10,7 +10,7 @@ void bulletSetup() {
 }
 
 
-class Bullet {
+class Bullet extends GameObject {
   
   PVector loc;
   PVector vel;
@@ -19,7 +19,7 @@ class Bullet {
   
   
   Bullet(){
-    loc = new PVector(player.loc.x, player.loc.y);
+    loc = play.loc.copy();
     vel = player.dir.copy();
     vel.setMag(10); 
     scaleFactor = 0.05;
